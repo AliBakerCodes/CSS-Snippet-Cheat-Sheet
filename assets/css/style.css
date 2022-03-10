@@ -38,9 +38,6 @@ header p {
 }
 main {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* flex-grow: 1; */
-  
 }
 
 
@@ -61,10 +58,10 @@ footer {
   padding: 10px;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-evenly;
-  align-items: flex-start;
+
 }
 
-/* Added rotation, box-shadow, border-radius */
+
 .card {
   width: 300px;
   border-style: dashed;
@@ -83,13 +80,12 @@ footer {
   height: 300px;
 }
 
-/* Added border-radius to match the card */
+
 .card header {
   position: relative;
   margin-top: -30px;
   border-radius: 10px 10px 10px 10px;
   border: 2px solid var(--bordercolor);
-  /* border-color: var(--bordercolor); */
   padding: .5px;
   z-index: 2;
   background-color: var(--background); 
@@ -108,21 +104,49 @@ footer {
   margin: 1px 1px 2px 1px;
 }
 
-.card pre {
-  color: var(--white);
-  /* text-align: justify; */
-}
-/* @media screen and (max-width: 992px) {
-  .card {
-    width: 100%;
+.card code {
+  margin: 2px;
+  padding: 1px;
+  background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0% rgba(232, 102, 236, 0.6) 100%); 
   }
+  text-align: justify;
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+.card code pre {
+  color: var(--white);
+}
+footer{
+  color:var(--glowpink);
+}
+footer span{
+  color:red;
+}
+
+@media screen and (max-width: 768px) {
+  
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1em;
+      grid-row-gap: 10px;
+    }
+    
   
 }
 
 @media screen and (max-width: 767px) {
-  main
- {
-    flex-direction: column;
-    width: 50%; */
   
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 10px;
+    justify-content: center;
+    place-items: center;
+  }
+  
+
 }
