@@ -4,12 +4,21 @@
   --bodytext: #e867ed;
   --bordercolor: #e0eae5;
   --codetext: #fff;
+  --cardgradient: linear-gradient(
+    rgba(232, 102, 236, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+  --cardglow: inset 0px 0px 8px
+  rgba(232, 102, 236, 1), 0 0 15px
+  rgba(232, 102, 236, 1);
 }
 html {
   /* Standarizing font size to 10 px */
   font-size: 62.5%;
 }
-
+#theme1:hover {
+  --background: white;
+}
 body {
   /*Font family for best font on each OS*/
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
@@ -106,11 +115,10 @@ footer {
   padding: 2rem;
   text-align: center;
   background: var(--background);
-  color: var(--Glowpink);
+  color: var(--bodytext);
   margin-top: auto;
-  color: var(--glowpink);
 }
-
+/* For the heart */
 footer span {
   color: red;
 }
@@ -129,6 +137,8 @@ footer span {
   justify-content: center;
 }
 
+/* main card class. Cards are flex boxes and responsive */
+
 .card {
   display:flex;
   min-width: 30rem;
@@ -142,11 +152,11 @@ footer span {
   justify-content: flex-start;
   min-height: 100%;
   /* outline is like border, but on the outside of the box instead of inside */
-  outline: 2px dashed var(--gin);
+  outline: 2px dashed var(--bordercolor);
   outline-offset: -2px;
   transition: all 0.5s ease-in-out;
 }
-
+/* the rounded card header */
 .card-header {
   position: relative;
   margin-top: -3rem;
@@ -158,7 +168,7 @@ footer span {
   transition: all 0.5s ease-in-out;
 }
 .card p {
-  color: var(--glowpink);
+  color: var(--bodytext);
   text-align: justify;
   margin: .1rem;
 }
@@ -181,19 +191,14 @@ footer span {
   align-items: center;
   display: flex;
   flex-grow: 1;
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
+  background-image: var(--cardgradient);
   min-height: 100%;
   border-radius: .8rem;
 }
-
+/* glow effect on hover over any card */
 .card:hover,
 .card:hover .card-header {
-  box-shadow: inset 0px 0px 8px
-  rgba(232, 102, 236, 1), 0 0 15px
-  rgba(232, 102, 236, 1); 
+  box-shadow: var(--cardglow); 
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
