@@ -16,9 +16,7 @@ html {
   /* Standarizing font size to 10 px */
   font-size: 62.5%;
 }
-#theme1:hover {
-  --background: white;
-}
+
 body {
   /*Font family for best font on each OS*/
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
