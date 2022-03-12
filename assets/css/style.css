@@ -157,12 +157,9 @@ footer {
   margin: .1rem;
 }
 
+/* Select the code fragment on click */
 .card code {
-  /* padding: 2rem;
-  text-align: justify; */
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
+  margin: 1rem;
   user-select: all;
    
 }
